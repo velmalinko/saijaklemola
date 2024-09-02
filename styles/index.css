@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+header {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+div {
+    padding: 4rem;
+}
+
+#otsikko {
+    display: flex;
+    justify-content: center;
+}
+
+.headeri {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kuvaboksi {
+    display: flex;
+}
+
+#logo {
+    width: 175px;
+    height: 168px;
+    flex-shrink: 0;
+}
+
+h1 {
+    color: #1E1E1E;
+    font-family: "Yeseva One";
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2 {
+    color: #354B54;
+    font-family: Trispace;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+@media (max-width: 620px) {
+    
+    .headeri {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
