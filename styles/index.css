@@ -215,6 +215,10 @@ p {
         padding-bottom: 2rem;
     }
 
+    .tekstivasemmalla {
+        padding-right: 0;
+    }
+
     h1 {
         font-size: 4rem;
     }
