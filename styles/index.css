@@ -127,6 +127,7 @@ nav {
 }
 
 .ala {
+    display: flex;
     height: 7rem;
 }
 
@@ -135,12 +136,26 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 #linkki {
-    color: #000;
-    padding-right: 2rem;
+    color: rgb(216, 216, 216);
 }
+
+#linkki:link, #linkki:visited {
+    background-color: #00a6e2; 
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+#linkki:hover, #linkki:active {
+    background-color: #0076a0; /* Darker color on hover */
+  }
 
 #logo {
     width: 175px;
