@@ -77,6 +77,13 @@ nav {
     flex-direction: column;
 }
 
+.tekstiboksi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .infoteksti {
     display: flex;
     flex-direction: column;
@@ -86,10 +93,11 @@ nav {
     padding-right: 3rem;
     padding-left: 3rem;
     max-width: 50rem;
+    width: 100%;
 }
 
 .email-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 15rem; /* Adjust the size of the button */
@@ -101,10 +109,11 @@ nav {
     font-size: 24px; /* Adjust the size of the icon or text */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    margin: 1rem; /* Add gap between buttons */
 }
 
 .email-button:hover {
-    background-color: #1e7bc3; /* Darker color on hover */
+    background-color: #b3b8bb; /* Darker color on hover */
     color: #fff; /* Light text on hover */
     transform: scale(1.1); /* Slightly enlarges the button on hover */
 }
@@ -130,6 +139,8 @@ nav {
 .tekstivasemmalla {
     text-align: left;
     padding-right: 2rem;
+    width: 100%;
+    max-width: 50rem;
 }
 
 .ala {
@@ -137,6 +148,12 @@ nav {
     height: 7rem;
 }
 
+.julisteet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 footer {
     display: flex;
     flex-direction: row;
@@ -207,9 +224,15 @@ p {
 }
 
 @media (max-width: 750px) {
-
     #otsikko {
         text-align: center;
+    }
+
+    .retket {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     
     .headeri {
@@ -217,7 +240,10 @@ p {
         gap: 1rem;
         align-items: center;
         justify-content: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
+
     footer {
         flex-direction: column;
         gap: 1rem;
@@ -235,21 +261,94 @@ p {
         justify-content: center;
         padding-right: 0;
         padding-bottom: 2rem;
+        text-align: center;
     }
 
     .tekstivasemmalla {
         padding-right: 0;
+        text-align: center;
+        width: 90%;
+    }
+
+    .infoteksti {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-align: left;
+        width: 90%;
+    }
+
+    .julisteet {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .email-button {
+        width: 85vw; /* 85% of viewport width */
+        height: 85vw; /* Keep it square */
+        max-width: 12rem; /* Maximum size */
+        max-height: 12rem; /* Maximum size */
+        margin: 1rem 0; /* Vertical gap between buttons */
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 
     p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .headeri {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .infoteksti {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        width: 95%;
+    }
+
+    .email-button {
+        width: 85vw; /* 85% of viewport width */
+        height: 85vw; /* Keep it square */
+        max-width: 10rem; /* Maximum size */
+        max-height: 10rem; /* Maximum size */
+        margin: 1rem 0; /* Vertical gap between buttons */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
         font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tekstivasemmalla {
+        width: 95%;
     }
 }
