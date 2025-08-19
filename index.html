@@ -73,7 +73,48 @@
         <p>Retkille voi osallistua yksin tai ryhmissä. Kesto
         vaihtelee yhdestä kolmeen tuntiin. </p>
     </div>
+    <div class="välilyönti"></div> 
+    <div class="seuraavat_retket">
+      <h2 style="color: white;">Seuraavat retket</h2>
+      <div class="accordion-container">
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Lisätietoa kaikista retkistä</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <a href="https://www.lahti.fi/uutiset/lahde-mukaan-opastetuille-lahiluontoretkille/">
+              Lisätietoja retkistä löytyy klikkaamalla tästä!</a>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Ilmoittaudu: Viuhahdus</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <a href="https://link.webropolsurveys.com/EventParticipation/EventPublic/b9720ea6-6ed1-4baf-9a80-a97987bf766a?displayId=Fin3406007">
+              Ilmoittaudu Viuhahdus-retkelle klikkaamalla tästä</a>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Ilmoittaudu: Vanhan metsän huminaa ja tarinoita</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <a href="https://link.webropolsurveys.com/EventParticipation/EventPublic/08e7e213-38f7-4fd8-9d17-503155b64ad1?displayId=Fin3406052">
+              Ilmoittaudu Vanhan metsän huminaa ja tarinoita -retkelle klikkaamalla tästä</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
     <div class="välilyönti"></div>
+    <h2>Esittelyvideot erikseen varattaville retkille</h2>
     <div class="retket">
       <div class="email-button">
         <a href="https://youtu.be/MOuQkmSsWRk?si=PWnxhv-bdnRDOS37">
@@ -102,5 +143,40 @@
       <!--<div><img class="ala" src="photos/geoparkunesco_logot2-768x238.png"/></div>-->
       <div><img class="ala" src="photos/SGP-guide_main.png"/></div>
     </footer>
+
+    <script>
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const isActive = button.classList.contains('active');
+        
+        // Close all other accordion items
+        const allHeaders = document.querySelectorAll('.accordion-header');
+        const allContents = document.querySelectorAll('.accordion-content');
+        
+        allHeaders.forEach(header => header.classList.remove('active'));
+        allContents.forEach(content => {
+          content.classList.remove('active');
+          content.style.height = '0px';
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          button.classList.add('active');
+          content.classList.add('active');
+          
+          // Calculate the actual height for smooth animation
+          const contentHeight = content.scrollHeight;
+          content.style.height = contentHeight + 'px';
+        }
+      }
+
+      // Initialize accordion heights on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        const allContents = document.querySelectorAll('.accordion-content');
+        allContents.forEach(content => {
+          content.style.height = '0px';
+        });
+      });
+    </script>
   </body>
 </html>
