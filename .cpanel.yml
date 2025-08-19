@@ -2,8 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/example/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp styles.css $DEPLOYPATH
-    - /bin/cp -R photos $DEPLOYPATH
-    - /bin/cp -R elements $DEPLOYPATH
-    - /bin/cp -R styles $DEPLOYPATH
+    - cp index.html $DEPLOYPATH
+    - cp styles.css $DEPLOYPATH
+    - cp -r photos $DEPLOYPATH
+    - cp -r elements $DEPLOYPATH
+    - cp -r styles $DEPLOYPATH
