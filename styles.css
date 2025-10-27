@@ -17,6 +17,9 @@ img {
 a {
     text-decoration: none;
     color: #000;
+}
+
+#linkki2 {
     text-decoration: underline;
 }
 
@@ -124,6 +127,7 @@ nav {
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
+    width: 70%;
 }
 
 .accordion-item:hover {
@@ -258,6 +262,10 @@ nav {
 .accordion-content a:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 166, 226, 0.3);
+}
+
+#hinnasto {
+    font-family: Trispace;
 }
 
 .email-button {
